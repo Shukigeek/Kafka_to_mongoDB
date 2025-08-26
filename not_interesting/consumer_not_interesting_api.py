@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.manage_mongo import MongoManger
+from core.manage_mongo import MongoManger
 
 app = FastAPI()
 

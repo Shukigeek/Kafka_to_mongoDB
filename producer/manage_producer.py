@@ -1,4 +1,4 @@
-from data.get_data import Data
+from producer.data.get_data import Data
 from producer.producer_conn import Producer
 
 

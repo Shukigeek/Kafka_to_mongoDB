@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.manage_mongo import MongoManger
+from core.manage_mongo import MongoManger
 import uvicorn
 
 app = FastAPI()
@@ -18,4 +18,4 @@ def get_last_data(read = "all"):
     return consumer.read_last()
 
 if __name__ == '__main__':
-    uvicorn.run("consumer_interesting_api:app", host="127.0.0.1", port=8001, reload=True)
+    uvicorn.run("consumer_interesting_api:core", host="127.0.0.1", port=8001, reload=True)

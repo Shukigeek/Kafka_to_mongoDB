@@ -25,7 +25,7 @@ services:
   publisher:
     build:
       context: .
-      dockerfile: Dockerfile.producer
+      dockerfile: producer/Dockerfile
     environment:
       - KAFKA_BROKER=kafka:9092
     ports:
@@ -36,7 +36,7 @@ services:
   subscriber_interesting:
     build:
       context: .
-      dockerfile: Dockerfile.interesting
+      dockerfile: interesting/Dockerfile
     environment:
       - KAFKA_BROKER=kafka:9092
       - COLLECTION=interesting
@@ -50,7 +50,7 @@ services:
   subscriber_not_interesting:
     build:
       context: .
-      dockerfile: Dockerfile.not_interesting
+      dockerfile: not_interesting/Dockerfile
     environment:
       - KAFKA_BROKER=kafka:9092
       - COLLECTION=not_interesting

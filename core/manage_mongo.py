@@ -1,6 +1,6 @@
 from datetime import datetime
-from app.consumer import Consumer
-from mongo.mongo_WR import WriteRead
+from core.consumer import Consumer
+from core.mongo_WR import WriteRead
 
 
 class MongoManger:

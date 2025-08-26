@@ -1,4 +1,4 @@
-from mongo.mongo_dal import Connection
+from core.mongo_dal import Connection
 
 class WriteRead:
     def __init__(self,collection):

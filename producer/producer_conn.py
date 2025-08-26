@@ -2,13 +2,15 @@ from kafka import KafkaProducer
 from kafka.errors import NoBrokersAvailable
 import json
 import time
+import os
 
 class Producer:
     def __init__(self):
+        kafka_broker = os.getenv("KAFKA_BROKER", "localhost:9092")
         while True:
             try:
                 self.producer = KafkaProducer(
-                    bootstrap_servers=['localhost:9092'],
+                    bootstrap_servers=[kafka_broker],
                     value_serializer=lambda x: json.dumps(x).encode('utf-8')
                 )
                 print("Connected to Kafka!")

@@ -1,7 +1,7 @@
 from sklearn.datasets import fetch_20newsgroups
 
 
-@staticmethod
+
 class Data:
     def __init__(self):
         self.interesting_cats=['alt.atheism',
@@ -31,7 +31,3 @@ class Data:
     def not_interesting(self):
         return fetch_20newsgroups(subset='all',categories=self.not_interesting_cats).data
 
-
-d = Data()
-print(len(d.not_interesting()))
-print(len(d.interesting()))

@@ -5,9 +5,9 @@ class Connection:
     def __init__(self):
         self.user = os.getenv("MONGO_USER")
         self.password = os.getenv("MONGO_PASSWORD")
-        self.host = os.getenv("MONGO_HOST", "localhost")
+        self.host = os.getenv("MONGO_HOST", "mongodb")
         self.port = os.getenv("MONGO_PORT", "27017")
-        self.db = os.getenv("MONGO_DB","enemy_soldiers")
+        self.db = os.getenv("MONGO_DB","news")
         self.auth = os.getenv("MONGO_AUTH_DB","admin")
 
         self.client = None

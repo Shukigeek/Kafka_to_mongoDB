@@ -48,32 +48,36 @@ Consumer endpoints allow you to trigger the processing manually.
 
 
 Kafka_to_mongoDB/
-│
-├─ docker-compose.yml
-├─ Dockerfile.interesting
-├─ Dockerfile.not_interesting
-├─ Dockerfile.producer
-├─ README.md
-├─ requirements.txt
-│
-├─ app/
-│   ├─ consumer.py
-│   └─ manage_mongo.py
-│
-├─ data/
-│   └─ get_data.py
-│
-├─ interesting/
-│   └─ consumer_interesting_api.py
-│
-├─ mongo/
-│   ├─ mongo_dal.py
-│   └─ mongo_WR.py
-│
-├─ not_interesting/
-│   └─ consumer_not_interesting_api.py
-│
-└─ producer/
-    ├─ manage_producer.py
-    ├─ producer_api.py
-    └─ producer_conn.py
+├── .gitignore
+├── docker-compose.yml
+├── README.md
+├── requirements.txt
+├── .idea/
+│   ├── .gitignore
+│   ├── Kafka_to_mongoDB.iml
+│   ├── misc.xml
+│   ├── modules.xml
+│   ├── vcs.xml
+│   ├── workspace.xml
+│   └── inspectionProfiles/
+│       ├── profiles_settings.xml
+│       └── Project_Default.xml
+├── core/
+│   ├── consumer.py
+│   ├── manage_mongo.py
+│   ├── mongo_dal.py
+│   └── mongo_WR.py
+├── interesting/
+│   ├── consumer_interesting_api.py
+│   └── Dockerfile
+├── not_interesting/
+│   ├── consumer_not_interesting_api.py
+│   └── Dockerfile
+└── producer/
+    ├── Dockerfile
+    ├── manage_producer.py
+    ├── producer_api.py
+    ├── producer_conn.py
+    └── data/
+        └── get_data.py
+
